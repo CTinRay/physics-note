@@ -1,0 +1,217 @@
+\documentclass[fleqn,a4paper,12pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+
+
+\title{DSA Homework \#5}
+\date{}
+
+\usepackage{pgfplots}
+
+\setcounter{section}{0}
+
+\usepackage{listings}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{forest}
+
+% \usepackage{fontspec}
+% \setmainfont{FreeSans}
+%\usepackage{unicode-math}
+
+\usepackage{mathspec}
+\setmainfont{FreeSans}
+\setmathsfont(Digits,Latin,Greek)[Numbers={Lining,Proportional}]{FreeSerif}
+\newfontfamily\ZhFont{文泉驛微米黑}
+\newfontfamily\SmallFont[Scale=0.8]{Droid Sans}
+\newfontfamily\SmallSmallFont[Scale=0.7]{FreeSans}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Phys Note}
+\rfoot{\thepage / \pageref{LastPage}}
+
+
+
+\begin{document}
+
+
+\begin{tikzpicture}
+
+
+  %\draw [help lines] (0,0) grid (14,6);
+
+  % moving car
+  \draw [very thick] (1,2) -- (5,2); 
+  \draw (1.5,1.5) circle [radius = 0.5]; 
+  \draw (4.5,1.5) circle [radius = 0.5]; 
+  \draw [->, line width = 1mm, blue] (5.5,2) -- (7,2) node [pos=.5,above] {$v$};
+
+  %box on car
+  \fill [gray] (2,2) rectangle (3,3); 
+  \draw [->, line width = 0.5mm] (3,2.25) -- (4.5,2.25) node [pos=.5,above] {$u'$};
+  \draw [->, line width = 1mm, blue] (3,3) -- (5.5,3) node [pos=.5,above] {$u = v + u'$};
+
+  % ground
+  \draw [very thick] (0,1) -- (14,1); 
+
+
+\end{tikzpicture}
+
+Galileo's velocity addiction rule\\
+\[
+  u = u' + v 
+\]
+
+Einstein's velocity addiction rule\\
+\[
+  u = \frac{u'+v}{1+\frac{u'v}{c^2}}
+\]
+\ \\
+
+\begin{tikzpicture}
+  \draw [dotted] (0,0) grid (15,6);
+  \draw (2,2) rectangle (6,4);
+  \draw (3,1.5) circle [radius=0.5];
+  \draw (5,1.5) circle [radius=0.5];
+  \draw [->](4,3) -- (2,3);
+  \draw [->](4,3) -- (6,3);
+  \fill (4,3) circle (3pt) node[above] {light};
+  \fill (6,3) circle (1pt) node[above] {a};
+  \fill (2,3) circle (1pt) node[above] {b};
+
+  \draw (8,2) rectangle (12,4);
+  \draw (9,1.5) circle [radius=0.5];
+  \draw (11,1.5) circle [radius=0.5];
+
+  \draw [->](9,3) -- (8,3);
+  \draw [->](9,3) -- (12,3);
+  \fill (9,3) circle (3pt) node[above] {light};
+
+\end{tikzpicture}
+\\for people at stationary coordination, b happens first
+\\for people on the car, a and b happens at the same time.
+\ \\\ 
+\ \\
+\begin{minipage}[r]{7cm}
+  \begin{tikzpicture}[>=stealth]
+    \draw [dotted] (1,0) grid (8,6);
+    \draw (2,1) rectangle (4,5);
+    \draw (5,1) rectangle (7,5);
+    \draw [blue, very thick](3,5) circle (3pt) node[above] {light};
+    \draw [blue!50, very thick](6,5) circle (3pt) node[above] {light};
+    \draw [dashed,blue,->] (3,5) -- (3,1) node[pos=.5,above] {$h$};
+    \draw [->] (3,5) -- (6,1) node[pos=.5,sloped,above] {$c\Delta t$};
+    \draw [->](3,0.8) -- (6,0.8) node[ pos=0.5, sloped, above] {$v\Delta t$};
+  \end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[l]{7cm}
+\begin{align*} 
+ (c \Delta t ) ^ 2 &= h^2 + (v\Delta t )^2  \\
+  h ^2 &= (c^2 - v^2 ) \Delta t  \\
+  c^2 {\Delta t'}^2 &= (c^2 - v^2 ) \Delta t \\
+  \Delta t' &= \sqrt{ 1 - \frac{v^2}{c^2} } \Delta t  \\ 
+ \Delta t' &< \Delta t 
+\end{align*}
+\end{minipage}
+\\ Moving clocks run slow
+\\
+\begin{tikzpicture}
+  \draw [dotted] (0,0) grid (15,6);
+  
+  %car 1
+  \draw (2,2) rectangle (6,4);
+  \draw (3,1.5) circle [radius=0.5];
+  \draw (5,1.5) circle [radius=0.5];
+  \draw [->](4,3) -- (2,3);
+  \draw [->](4,3) -- (6,3);
+  \draw [blue, very thick] (6,2.8) -- (6,3.2) node[above] {mirror};
+  \draw [blue, very thick] (2,3) circle [radius=0.1] node[above] {Event a: light};
+
+  \draw [gray] (8,2) rectangle (12,4);
+  \draw [gray] (9,1.5) circle [radius=0.5];
+  \draw [gray] (11,1.5) circle [radius=0.5];
+  \draw [blue, very thick] (12,2.8) -- (12,3.2) node[above] {};
+  \draw [blue, very thick] (8,3) circle [radius=0.1] node[above] {};
+
+
+  \draw [->] (2,3.2) -- (12,3.2);
+  \draw [->] (12,2.8) -- (8,2.8);
+
+  \draw [|<->|] (2,4.5) -- (6,4.5) node[above,pos=.5] {$\Delta x$};
+\end{tikzpicture}
+
+\begin{align*} 
+  \Delta t' &= 2 \frac {\Delta x'}{c}\\
+  \Delta t_1 &= \frac {\Delta x + v \Delta t_1}{c} \implies \Delta t_1 = \frac{\Delta x }{c - v}\\
+  \Delta t_2 &= \frac {\Delta x - v \Delta t_2}{c} \implies \Delta t_2 = \frac{\Delta x }{c + v}\\
+  \Delta t &= \Delta t_1 + \Delta t_2 = \frac{2\Delta x}{c} \frac{1}{1-\frac{v^2}{c^2}}\\
+  \Delta x' &= \frac {c}{2} \Delta t' \\
+            &= \frac {c}{2} \Delta t \sqrt{1-\frac{v^2}{c^2}} \\
+            &= \frac {c}{2} \frac{2\Delta x}{c} \frac{1}{1-\frac{v^2}{c^2}} \sqrt{1-\frac{v^2}{c^2}}\\
+            &= \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} \Delta x \\
+            &\implies \Delta x' > \Delta x \\              
+\end{align*}
+\\ \ 
+\\ \ 
+
+\subsection{The barn and ladder paracby}
+(A) Back end of the ladder makes it in the door\\
+(B) Front end of the ladder hits the wall of the born \\
+\\Farmer: (A) before (B)
+\\Son: (B) before (A)
+
+\begin{tikzpicture}
+  \draw [dotted] (0,0) grid (15,7);
+  \draw [very thick] (1,2) -- (1,1) -- (4,1) -- (4,6) -- (1,6) -- (1,5);
+  \draw [line width=1mm, blue] (0,3.5) -- (4,3.5) node[above, pos = 0.5]{ ladder };
+
+  \draw [very thick] (6,2) -- (6,1) -- (9,1) -- (9,6) -- (6,6) -- (6,5);
+  \draw [line width=1mm, blue] (6.5,3.5) -- (8.5,3.5) node[above , pos = 0.5]{ ladder };
+
+  \draw [very thick] (12,2) -- (12,1) -- (14,1) -- (14,6) -- (12,6) -- (12,5);
+  \draw [line width=1mm, blue] (10,3.5) -- (14,3.5) node[above , pos = 0.5]{ ladder };
+
+\end{tikzpicture}
+
+\subsection{The Lorentz Transformations }
+\begin{itemize}
+  \item 
+    \textbf{Event:} Something that take place at a specific location at precise time.
+  \item
+    Knowing $(x,y,z,t)$, what is $(x',y',z',t')$ of the same event
+    \begin{align*} 
+      d &= \sqrt{ 1 - \frac{v^2}{c^2} } \Delta x'\\
+      (x - vt ) &= \sqrt{ 1 - \frac{v^2}{c^2} } x' \\
+    \end{align*}
+  \item
+    \begin{align*}
+      x' &= d' - vt \\
+      d' &= \sqrt{ 1 - \frac{v^2}{c^2} } x \\
+      x' &= \frac{1}{\sqrt{ 1 - \frac{v^2}{c^2} }} x - vt' = \sqrt{ 1 - \frac{v^2}{c^2} } (x-vt)\\
+      vt' &= ( \sqrt{ 1 - \frac{v^2}{c^2} } -\frac{1}{\sqrt{ 1 - \frac{v^2}{c^2} }}x - \sqrt{ 1 - \frac{v^2}{c^2} }vt\\
+      &= \sqrt{ 1 - \frac{v^2}{c^2} } ( \frac{v}{c^2} x - vt )
+    \end{align*}
+
+\end{itemize}
+
+\begin{tikzpicture}
+\begin{axis}[
+  ymin=-1, ymax=1, xmin=-1, xmax=1, zmin=-1, zmax=1,
+  xtick={0},
+  ytick={0},
+  ztick={0},
+  axis lines= center,
+  colormap/cool,
+  xlabel=$x$, ylabel=$y$, zlabel=$z$,
+]
+\end{axis}
+\end{tikzpicture}
+
+
+
+\end{document}
