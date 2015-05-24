@@ -186,23 +186,35 @@ Einstein's velocity addiction rule\\
     Knowing $(x,y,z,t)$, what is $(x',y',z',t')$ of the same event
   \item
 
-\end{itemize}
-\ \\ \ 
+
+Let $x$ be the same position as $x'$. \\
+The stick's length measured in the stationary coordiate be $d$.\\
 \begin{tikzpicture}
   \draw [->] [very thick] (-2,0) -- (10,0) node [right]{$x$};
   \draw [->] [very thick] (0,-1) -- (0,3) node [above] {$y$};
 
   \draw [gray,->] [very thick] (3,-1) -- (3,3) node [above] {$y'$};
 
-  \draw [blue, line width = 1.5mm] (3.05,0) -- (7,0) node [right]{};
+  \draw [blue!50, line width = 1.5mm] (3.05,0) -- (7,0) node [right]{};
   \draw [green,->,thick] (7.05,0.25) -- (9.05,0.25) node [above,pos=0.5] {$v$};
 
   \draw [<->] (0,0.5) -- (3,0.5) node [above,pos=0.5] {$vt$};
+  \draw [gray, <-> ] (3.05,0.5) -- (7,0.5) node [above,pos=0.5] { $\Delta x' $ };
+  \draw [blue, <-> ] (3.05,-0.5) -- (7,-0.5) node [below,pos=0.5] { $d $ };
+
+
+  \draw [gray] (7,0.1) -- (7,-0.1) node [below] { $x'$ };
 \end{tikzpicture}
+
     \begin{align*} 
       d &= \sqrt{ 1 - \frac{v^2}{c^2} } \Delta x'\\
       (x - vt ) &= \sqrt{ 1 - \frac{v^2}{c^2} } x' \\
+      x' &= \frac{1}{\sqrt{ 1 - \frac{v^2}{c^2} }} (x' - vt )
     \end{align*}
+
+\item 
+  Let $x$ be the same position as $x'$. \\
+  The stick's length measured in the stationary coordiate be $d$.\\
 
 \begin{tikzpicture}
   \draw [->] [very thick] (-2,0) -- (10,0) node [right]{$x$};
@@ -210,19 +222,25 @@ Einstein's velocity addiction rule\\
 
   \draw [gray,->] [very thick] (3,-1) -- (3,3) node [above] {$y'$};
 
-  \draw [blue, line width = 1.5mm] (0,0) -- (7,0) node [right]{};
-  \draw [green,->,thick] (-0.25,0.25) -- (-3,0.25) node [above,pos=0.5] {$v$};
+  \draw [blue!50, line width = 1.5mm] (0,0) -- (7,0) node [right]{};
+  \draw [green!50,->,thick] (0.15,1.5) -- (2,1.5) node [above,pos=0.5] {$v$};
 
-  \draw [<->] (0,0.5) -- (3,0.5) node [above,pos=0.5] {$vt'$};
+
+  \draw [gray] (7,0.1) -- (7,-0.1) node [below] { $x'$ };
+
+  \draw [gray,<->] (0,0.5) -- (3,0.5) node [above,pos=0.5] {$vt'$};
+  \draw [blue!50] (0,-0.5) -- (7,-0.5) node [below, pos=0.5]{ $d'=x'+vt'$};
+  \draw [<->] (0,1) -- (7,1) node [above, pos=0.5]{ $x=d$};
+    
 \end{tikzpicture}
 
     \begin{align*}
-      x' &= d' - vt \\
+      x' &= d' - vt' \\
       d' &= \sqrt{ 1 - \frac{v^2}{c^2} } x \\
-      x' &= \frac{1}{\sqrt{ 1 - \frac{v^2}{c^2} }} x - vt' = \sqrt{ 1 - \frac{v^2}{c^2} } (x-vt)\\
-      vt' &= ( \sqrt{ 1 - \frac{v^2}{c^2} } -\frac{1}{\sqrt{ 1 - \frac{v^2}{c^2} }}x - \sqrt{ 1 - \frac{v^2}{c^2} }vt\\
-      &= \sqrt{ 1 - \frac{v^2}{c^2} } ( \frac{v}{c^2} x - vt )
+      x' &= \sqrt{ 1 - \frac{v^2}{c^2} } x - vt' = \frac {1}{\sqrt{ 1 - \frac{v^2}{c^2} }} (x-vt)\\
+      vt' &= ( \sqrt{ 1 - \frac{v^2}{c^2} } -\frac{1}{\sqrt{ 1 - \frac{v^2}{c^2} }} )x - \frac{1}{\sqrt{ 1 - \frac{v^2}{c^2} }}vt\\
+      &= \frac {1}{ \sqrt{ 1 - \frac{v^2}{c^2} } } ( \frac{v}{c^2} x - vt )
     \end{align*}
 
-
+\end{itemize}
 \end{document}
