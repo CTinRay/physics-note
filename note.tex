@@ -273,6 +273,74 @@ The stick's length measured in the stationary coordiate be $d$.\\
       &= \frac {1}{ \sqrt{ 1 - \frac{v^2}{c^2} } } ( vt - \frac{v^2}{c^2} x )\\
       t' &= \frac {1}{ \sqrt{ 1 - \frac{v^2}{c^2} } } ( t - \frac{v}{c^2} x )
     \end{align*}
+    
+  \item
+    \textbf{Check Simutanuously:}\\
+    $S$:\\
+    Event A $(x = 0, t = 0 ) $\\
+    Event B $(x = a, t = 0 ) $\\
+    $S'$:\\
+    Event A $(x' = 0, t' = 0 )$\\
+    Event B $(x' = \gamma a , t' = -\gamma (\frac {v}{c^2}) a  )$\\
+  \item
+    \textbf{Time Dimention:}\\
+    $\Delta x' = 0 = \gamma ( \Delta x - v \Delta t ) \implies \Delta x = v \Delta t$
+    \begin{align*}
+      \Delta t' &= \gamma ( \Delta t - \frac{v}{c^2} \Delta x ) \\
+                &= \gamma ( \Delta t - \frac{v^2}{c^2} \Delta t ) \\
+                &= \sqrt { 1 - \frac{v^2}{c^2} } \Delta t \\
+    \end{align*}
+
+  \item
+    \begin{align*}
+      {u_x}' &= \frac { \Delta x' }{ \Delta t' }\\
+         &= \frac { \gamma (\Delta x - v \Delta t ) }{ \gamma ( \Delta t - \frac{v}{c^2} \Delta x ) }\\
+         &= \frac { u_x -v }{ 1 - \frac {v}{c^2} V_x } \\
+      {u_y}' &= \frac { \Delta y' }{ \Delta t' } \\
+             &= \frac { \Delta y }{ \gamma ( \Delta t - \frac{ v }{ c^2 } \Delta x ) } \\
+             &= \frac { u_y }{ \gamma( 1 - \frac{v}{c^2} ) }
+    \end{align*}
+    
+  \item 
+    \textbf{Structure of Spacetime: }
+
+    \begin{itemize}
+    \item 
+      \textbf{Four vectors:}\\
+      (Time is the 0th-dimension.)
+      \begin{align*}
+        x^0  &= ct \\
+        x^1 &= x  \\
+        x^2 &= y \\
+        x^3 &= z \\
+      \end{align*}
+      Loranze transformation:
+      \begin{align*}
+        {x^0}' &= \gamma ( x^0 - \beta x^1 ) \\
+        {x^1}' &= \gamma (x^1 - \beta x^0 )  \\
+        {x^2}' &= x^2 \\
+        {x^3}' &= x^3 \\
+      \end{align*}
+\[
+      \begin{pmatrix}
+        x^0\\
+        x^1\\
+        x^2\\
+        x^3
+      \end{pmatrix}=
+      \begin{pmatrix}
+        \gamma & -\gamma \beta & 0 & 0\\
+        -\gamma \beta & \gamma & 0 & 0\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1 
+      \end{pmatrix}
+\]
+      \begin{align*}
+        (x^u)' &= \sum_{\beta = 0 }^{\delta} ( \Lambda ^{\alpha}_{\beta} x^{\beta} )\\
+        \implies (x^\mu)' &= \Lambda ^{\mu}_{\nu} X^{\nu}
+      \end{align*}
+
+    \end{itemize}
 
 \end{itemize}
 
