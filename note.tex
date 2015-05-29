@@ -314,7 +314,7 @@ The stick's length measured in the stationary coordiate be $d$.\\
         x^2 &= y \\
         x^3 &= z \\
       \end{align*}
-      Loranze transformation:
+      Lorenze transformation:
       \begin{align*}
         {x^0}' &= \gamma ( x^0 - \beta x^1 ) \\
         {x^1}' &= \gamma (x^1 - \beta x^0 )  \\
@@ -336,9 +336,96 @@ The stick's length measured in the stationary coordiate be $d$.\\
       \end{pmatrix}
 \]
       \begin{align*}
-        (x^u)' &= \sum_{\beta = 0 }^{\delta} ( \Lambda ^{\alpha}_{\beta} x^{\beta} )\\
+        (x^u)' &= \sum_{\nu = 0 }^{\delta} ( \Lambda ^{\mu}_{\nu} x^{\nu} )\\
         \implies (x^\mu)' &= \Lambda ^{\mu}_{\nu} X^{\nu}
       \end{align*}
+      \item
+        \textbf{Constant in Lorenze Transformation:}\\ 
+      \[ -(x^0)^2+(x^1)^2+(x^2)^2 + (x^3)^2 = a_\mu^\mu \  ( \mu=0,1,2,3) \]
+      \begin{align*}
+        (x^1)^2 + (x^2)^2 + (x^3)^2 &\implies length^2 of\ a\ vector \implies rotation \\
+                                    &\implies inner\ product
+      \end{align*}
+
+      \item 
+        \textbf{The invariant interval:}\\
+        Suppose there are two events in frame $S$:
+        \begin{itemize}
+          \item
+            event A: $ ( x^0_A, x^1_A, x^2_A, x^3_A ) $
+          \item 
+            event B: $ ( x^0_B, x^1_B, x^2_B, x^3_B ) $
+          \item 
+            The difference: $ \Delta x^\mu = x^\mu_A - x^\mu_B $ is a four vector.                    
+        \end{itemize}
+        The interval of $ \Delta x^u $ is defined by $ I = \Delta x_\mu \Delta x^\mu = -c^2 {\Delta t}^2 + d^2 $
+        \[ d = \sqrt{ (\Delta x^1 )^2 + (\Delta x^2 )^2 + (\Delta x^3 )^2  }\]
+        \begin{enumerate}
+          \item             
+            $ I < 0 $:
+            \begin{itemize}
+              \item 
+                timelike
+              \item
+                Causation.
+              \item
+                When two events occur at the \textbf{same place} $( d = 0 ) $, they are seperated only temporally.
+            \end{itemize}
+            
+          \item
+            $ I = 0 $:
+            \begin{itemize}
+            \item
+              lightlike
+            \item
+              Causation. ( by light )
+            \item
+              Ex: Light and sensor on the bus.
+            \item
+              Two events are connected by a signal traveling at the speed of the light.
+            \end{itemize}
+            
+          \item
+            $ I > 0 $:
+            \begin{itemize}
+              \item
+                Spacelike
+              \item
+                When two events occur at the \textbf{same time} and are seperated only spatially.
+            \end{itemize} 
+        \end{enumerate}
+
+        \item 
+          \textbf{Theorem:} If the interval between two events is timelike, there exists an internal system ( accessible by Lorenze transformation ) in which they occur at the same points likewise, If the interval is spacelike, there exist a system in which the two events occur at the same time.
+          \textbf{Proof:} \\
+          Two events A, B occur at $(t_A,x_A)$ and $(t_B,x_B)$.
+          \[ 
+            \begin{cases}
+              t_A' = \gamma( t_A-\frac{v}{c^2}x_A )\\
+              x_A' = \gamma( x_A - vt_A )
+            \end{cases}
+          \]
+          \[ 
+            \begin{cases}
+              t_B' = \gamma( t_B-\frac{v}{c^2}x_B )\\
+              x_B' = \gamma( x_B - vt_B )
+            \end{cases}
+          \]
+          \[
+            \Delta t = t_A -t_B
+          \]
+          Timelike: If $x_A' = x_B'$
+          \begin{align*}            
+            &\implies x_A - vt_A = x_B - vt_B \\
+            &\implies \frac{v}{c} = \frac { x_A - x_B }{ c( t_a - t_b ) }  < 1 
+          \end{align*}
+
+          Spacelike: If $t_A' = t_B'$
+          \begin{align*}            
+            &\implies t_A - \frac{v}{c^2}x_A = t_B - \frac{c}{c^2}x_B \\
+            &\implies \frac{v}{c} = \frac {c( x_A - x_B )}{ t_A - T_B } < 1 \\                          
+          \end{align*}
+          
 
     \end{itemize}
 
