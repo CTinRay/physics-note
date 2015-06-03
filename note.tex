@@ -427,7 +427,97 @@ The stick's length measured in the stationary coordiate be $d$.\\
           \end{align*}
           
 
+            
+
+
     \end{itemize}
+
+\end{itemize}
+
+\subsection{Relative Mechanics}
+\begin{itemize}
+  \item \textbf{Proper Time and Proper Velocity:}\\
+    \begin{itemize}
+    \item
+      The temporal coordinate of the moving frame.
+    \item
+      \[ d \tau = \sqrt{ 1 - \frac{u^2}{c^2} } dt \]
+    \item Example:\\
+      \[ u = \frac{4}{5}c = \frac{di}{dt} \]
+      \[ \eta = \frac{ dl }{ d \tau } = \frac{ dt }{ d \tau } \frac{ d l }{ d t } = \frac{1}{ \sqrt{ 1 - \frac{ u^2 }{ c^2 } } } u\]
+
+      \item 4-velocitty:
+        \[ \eta ^ \mu = \frac{ d x^\mu }{ dt } \]
+        \[ dx = c dt \]
+        \[ \eta ^0 = \frac{ c dt }{ dt } =  \frac{ c }{ \sqrt{ 1 - \frac{ v^2 }{ c^2 } } }   \]
+        Satisfies \textit{Lorenze Transformation}:\\
+        \[ 
+          \begin{cases}
+            {\eta^0}' &= \gamma ( \eta^0 - \beta \eta^1 ) \\
+            {\eta^1}' &= \gamma (\eta^1 - \beta \eta^0 )  \\
+            {\eta^2}' &= \eta^2 \\
+            {\eta^3}' &= \eta^3 \\
+          \end{cases}
+        \]
+        \[(\eta)^\mu = \Lambda^\mu_\nu \eta^\nu \]
+
+        \item \textbf{Exercise:}\\
+          Consider a car traveling along the $\frac{\pi}{4}$ line.\\
+          \begin{enumerate}
+            \item 
+              Find the componenet $\mu_x$ and $\mu_y$ of the ordinary velocity.\\
+              \[ u_x = \frac{ 2 }{ \sqrt{ 5 } } cos \frac{\pi}{4} = \sqrt{ \frac{2}{5} } c = u_y \]
+            \item
+              Find the compoment $\eta_x$ and $\eta_y$ of the proper velocity.
+              \[ \eta = \frac{ \frac{2}{\sqrt{5}}c }{ \sqrt{ 1 - \frac{4}{5} } } = 2c \]
+              \[ \eta_x = \eta_y = \sqrt{2}c \]
+            \item
+              Find the zeroth compoment of the 4-velocity.
+              \[ \eta^0 = \frac{u}{ \sqrt{ 1 - \frac{u^2}{c^2} } } = \sqrt{5} c \]
+          \end{enumerate}
+          A system $S'$ is moving in the x-direction with ( ordinary ) speed $ \sqrt{ \frac{2}{5} } c $. By using the qppropriate transformation laws.
+          \begin{itemize}
+          \item
+            Find the (ordinary) velocity component $\mu_x',\mu_y'$ in $S'$.
+            \[v = \sqrt{ \frac{ 2 }{ 5 } } c  \]
+            \[ u_x' = \frac{u'+v}{1+\frac{u'v}{c^2}} = \frac{ \sqrt{ \frac{ 2 }{ 5 } } c - \sqrt{ \frac{ 2 }{ 5 } } c }{ 1 - \frac{2}{5}} = 0 \]
+            \[ u_y' = \frac{1}{\gamma } \frac{u_1}{\sqrt{ 1 - {u'v}{c^2} } }  = \sqrt{ 1 - \frac{u^2}{c^2} }
+              \frac{ u_y }{\sqrt{ 1 - {u'v}{c^2} } }   
+= \sqrt{ \frac{2}{5} }( \frac{ \sqrt{ \frac{2}{5} } c }{ \frac{3}{5} } ) = \sqrt{ \frac{2}{5} } x \]
+          \item
+            FInd the proper velocity component $\eta_x', \eta_y'$ in $S'$.
+            \[ (\eta')^0 = \sqrt{ \frac{5}{3} } ( \sqrt{5} c -  \sqrt{ \frac{2}{5} } \sqrt{2} c ) = \sqrt{3}c \]
+            \[ (\eta')^1 = \sqrt{ \frac{5}{3} }( \sqrt{2}c - \sqrt{ \frac{2}{5} } \sqrt{2} x ) = 0 \]
+          \item
+            Check $ \eta' = \frac{ \mu' }{ \sqrt{ 1 - \frac{u^2}{c^2} } } $.
+            \[ \eta' = \sqrt{2}c \]
+            \[ u' = \sqrt{ \frac{2}{3} } c \]
+            \[ \frac{u'}{ \sqrt{ 1 - \frac{ u'^2 }{ c ^2 } } } = \frac{ \sqrt{ \frac{2}{3} } c  }{ \sqrt{ 1 - \frac{2}{3} } } = \sqrt{2}c = \eta' \]
+          \end{itemize} 
+              
+%          \end{itemize}
+          
+        
+    \end{itemize}
+    
+\subsection{Realativestic Mechanics}
+\begin{itemize}
+\item
+  Momentun = mass $\times$ velocity.
+  \[ \overrightarrow{p} = \gamma_u m \overrightarrow{u} = m \overrightarrow{\eta} \]
+  \[ m_A \eta_A + m_B \eta_B = m_C \eta_C + m_D \eta_D \]
+  \[ \eta = \frac{1}{\gamma} \eta_A' + \beta \eta_A^0  ----(Loranze-2) \]
+  \[ m_A( \frac{1}{\gamma} \eta_A' + \beta \eta_A^0 ) + m_B ( \frac{1}{\gamma} \eta_B' + \beta \eta_C^0 ) = m_C ( \frac{1}{\gamma} \eta_C' + \beta \eta_C^0 ) + m_D ( \frac{1}{\gamma} \eta_D' + \beta \eta_D^0 )  \]
+\item \textbf{Conservation of Mass:}\\
+  \[ \eta_0 = \frac{c}{ \sqrt{ 1 - \frac{u^2}{c^2} } } \]
+  \[ M = \frac{m}{ \sqrt{ 1 - \frac{u^2}{c^2} } } \implies relativistic\ mass \]
+  \[ m_A\eta_A^0 + m_B\eta_B^0 = m_C\eta_C^0 + m_D\eta_D^0 \]  
+  \[ \implies M_A + M_B = M_C + M_D \]
+  \[ p^0 = \frac{ mc }{ \sqrt{ 1 - \frac{u^2}{c^2} } } = \frac{ E }{ C } \]
+  Einstein defined
+  \[E = \frac{ mc^2 }{ \sqrt{ 1 - \frac{u^2}{c^2} } }  = mc^2 + \frac{1}{2} m u^2 \]
+\end{itemize}
+
 
 \end{itemize}
 
@@ -436,8 +526,8 @@ The stick's length measured in the stationary coordiate be $d$.\\
   \item
     \[  f' = f \sqrt{ \frac{ 1 - \beta }{ 1 + \beta } } \]
   \item
-    \[ v = \frac {\Delta \lambda }{ \lambda } c \]
-
+    \[ v = \frac {\Delta \lambda }{ \lambda } c\]
+    
 
 \end{itemize}
 \end{document}
