@@ -422,8 +422,8 @@ The stick's length measured in the stationary coordiate be $d$.\\
 
           Spacelike: If $t_A' = t_B'$
           \begin{align*}            
-            &\implies t_A - \frac{v}{c^2}x_A = t_B - \frac{c}{c^2}x_B \\
-            &\implies \frac{v}{c} = \frac {c( x_A - x_B )}{ t_A - T_B } < 1 \\                          
+            &\implies t_A - \frac{v}{c^2}x_A = t_B - \frac{v}{c^2}x_B \\
+            &\implies \frac{v}{c} = \frac {c( t_A - t_B )}{ x_A - x_B } < 1 \\                          
           \end{align*}
           
 
@@ -510,16 +510,58 @@ The stick's length measured in the stationary coordiate be $d$.\\
   \[ m_A( \frac{1}{\gamma} \eta_A' + \beta \eta_A^0 ) + m_B ( \frac{1}{\gamma} \eta_B' + \beta \eta_C^0 ) = m_C ( \frac{1}{\gamma} \eta_C' + \beta \eta_C^0 ) + m_D ( \frac{1}{\gamma} \eta_D' + \beta \eta_D^0 )  \]
 \item \textbf{Conservation of Mass:}\\
   \[ \eta_0 = \frac{c}{ \sqrt{ 1 - \frac{u^2}{c^2} } } \]
-  \[ M = \frac{m}{ \sqrt{ 1 - \frac{u^2}{c^2} } } \implies relativistic\ mass \]
+  \begin{align*}
+    M =& \frac{m}{ \sqrt{ 1 - \frac{u^2}{c^2} } } \implies relativistic\ mass \\
+    =& \gamma_u m\\
+    \implies& p^0 = m \eta^0 = \gamma_0 m c
+  \end{align*}
   \[ m_A\eta_A^0 + m_B\eta_B^0 = m_C\eta_C^0 + m_D\eta_D^0 \]  
   \[ \implies M_A + M_B = M_C + M_D \]
   \[ p^0 = \frac{ mc }{ \sqrt{ 1 - \frac{u^2}{c^2} } } = \frac{ E }{ C } \]
   Einstein defined
   \[E = \frac{ mc^2 }{ \sqrt{ 1 - \frac{u^2}{c^2} } }  = mc^2 + \frac{1}{2} m u^2 \]
 \end{itemize}
+\item
+  \textbf{Energy-momentum 4-vector:}\\
+  \begin{align*}
+    p^{\mu} =& m \eta ^ {\mu} = ( \frac{E}{c} , p^1, p^2, p^3 )\\
+    \overrightarrow p =& \frac{ m \overrightarrow{u} }{ \sqrt{ 1 - \frac{u^2}{c^2} } }\\
+    E =& \frac{mc^2}{{\sqrt{ 1 - \frac{v^2}{c^2} } } } = mc^2 + kE\\
+  \end{align*}
+  $| p^{\mu} |$ is invariant constant\\
+  \begin{align*}
+    &p^{\mu}p_{\mu} = - (p^0)^2 + ( \overrightarrow{p} \cdot \overrightarrow{p} ) = -m^2c^2 \\
+    &\implies E^2 - p^2c^2 = m^2c^2\\
+    &\implies E^2 = p^2c^2 + m^2c^2 \\
+  \end{align*}
+  As $m=0$: (photon )
+  \[ E=pc \]
+  
+  \item
+    \textbf{Example:}
+    Tow lumps of clay, each of rest mass $m$, collide head-on at $\frac{3}{5}c$. They stick together. 
+    Question: What is the mass of the comosite lump?
+    \begin{align*}
+      E_i =& E_1 + E_2\\
+      =& 2 \frac{ mc^2 }{ \sqrt{ 1 - \frac{u^2}{c^2} } } \\
+    \end{align*}
 
+  \item
+    \textbf{Relativistic: Kinematics}\\
+    Ex: A pion at rest decays into a muon and a neutrino.
+    Find the momentum of the outging muon, in terms of the two mass, $m_{\pi}$ and $m_{\mu}$. ($m_{\nu}$)\\
+    \[E_i=m_{\pi} c^2,P_i = 0\]
+    \[E_f = E_{\mu} + E_{\nu}, P_f = 0 = P_{\mu} + P_{\nu} \implies \overrightarrow{P}_{\mu} = - \overrightarrow{P}_{\nu}  \]
+  \[E_{\mu}^2 = P_{\mu}^2c^2+m_{\mu}^2c^4 \]
+  \[ E_{\nu} = P_{\nu} x \]
+  \[ E_i = E_f \implies m_{\pi}c^2 = \sqrt{ P_{\mu}^2c^2 + m_{\mu}^2c^4 } + P_{\mu}c \]
+  \[ P_u^2 + m_{\pi}^2 -2m_{\pi}c^2P_{\mu} = ( m_{\pi}c - P_{\mu} ) = P_{\mu}^2 + m_{\mu}^2 c^2\]
+  \[ \implies P_u = \frac{ c ( m_{\pi}^2 - m_{\mu}^2 ) }{ 2 m_{\pi} } \]
 
 \end{itemize}
+
+
+
 
 \subsection{HW note}
 \begin{itemize}
