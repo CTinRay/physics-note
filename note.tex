@@ -132,15 +132,21 @@ Einstein's velocity addiction rule\\
   \draw [blue, very thick] (6,2.8) -- (6,3.2) node[above] {mirror};
   \draw [blue, very thick] (2,3) circle [radius=0.1] node[above] {Event a: light};
 
-  \draw [gray] (8,2) rectangle (12,4);
-  \draw [gray] (9,1.5) circle [radius=0.5];
-  \draw [gray] (11,1.5) circle [radius=0.5];
-  \draw [blue, very thick] (12,2.8) -- (12,3.2) node[above] {};
-  \draw [blue, very thick] (8,3) circle [radius=0.1] node[above] {};
+  \draw [gray] (3.5,2) rectangle (7.5,4);
+  \draw [gray] (4.5,1.5) circle [radius=0.5];
+  \draw [gray] (6.5,1.5) circle [radius=0.5];
+  \draw [blue!60, very thick] (7.5,2.8) -- (7.5,3.2) node[above] {};
+  \draw [blue!60, very thick] (3.5,3) circle [radius=0.1] node[above] {};
+
+  \draw [gray] (5.5,2) rectangle (9.5,4);
+  \draw [gray] (6.5,1.5) circle [radius=0.5];
+  \draw [gray] (8.5,1.5) circle [radius=0.5];
+  \draw [blue!60, very thick] (9.5,2.8) -- (9.5,3.2) node[above] {};
+  \draw [blue!60, very thick] (5.5,3) circle [radius=0.1] node[above] {};
 
 
-  \draw [->] (2,3.2) -- (12,3.2);
-  \draw [->] (12,2.8) -- (8,2.8);
+  \draw [yellow, ->, very thick] (2,3.2) -- (7.5,3.2);
+  \draw [yellow, ->, very thick] (7.5,2.8) -- (5.5,2.8);
 
   \draw [|<->|] (2,4.5) -- (6,4.5) node[above,pos=.5] {$\Delta x$};
 \end{tikzpicture}
@@ -323,16 +329,22 @@ The stick's length measured in the stationary coordiate be $d$.\\
       \end{align*}
 \[
       \begin{pmatrix}
-        x^0\\
-        x^1\\
-        x^2\\
-        x^3
+        {x^0}'\\
+        {x^1}'\\
+        {x^2}'\\
+        {x^3}'
       \end{pmatrix}=
       \begin{pmatrix}
         \gamma & -\gamma \beta & 0 & 0\\
         -\gamma \beta & \gamma & 0 & 0\\
         0 & 0 & 1 & 0\\
         0 & 0 & 0 & 1 
+      \end{pmatrix}
+      \begin{pmatrix}
+        x^0\\
+        x^1\\
+        x^2\\
+        x^3
       \end{pmatrix}
 \]
       \begin{align*}
@@ -396,7 +408,7 @@ The stick's length measured in the stationary coordiate be $d$.\\
         \end{enumerate}
 
         \item 
-          \textbf{Theorem:} If the interval between two events is timelike, there exists an internal system ( accessible by Lorenze transformation ) in which they occur at the same points likewise, If the interval is spacelike, there exist a system in which the two events occur at the same time.
+          \textbf{Theorem:} If the interval between two events is timelike, there exists an internal system ( accessible by Lorenze transformation ) in which they occur at the same points likewise, If the interval is spacelike, there exist a system in which the two events occur at the same time.\\
           \textbf{Proof:} \\
           Two events A, B occur at $(t_A,x_A)$ and $(t_B,x_B)$.
           \[ 
